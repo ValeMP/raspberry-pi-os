@@ -44,3 +44,9 @@ thread_start:
 	/* We are done, pass the return value through x0.  */
 	mov	x8, #SYS_EXIT_NUMBER
 	svc	0x0
+
+.globl call_sys_exit
+call_sys_temp:
+	mov  w8, #SYS_TEMP_NUMBER
+	svc #0
+	ret
