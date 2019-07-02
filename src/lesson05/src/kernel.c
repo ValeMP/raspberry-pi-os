@@ -73,7 +73,8 @@ void kernel_main(void)
 		printf("error while starting kernel process");
 		return;
 	}
-
+	kernel_temp();
+	
 	while (1){
 		schedule();
 	}	
