@@ -24,7 +24,8 @@ void sys_exit(){
 	exit_process();
 }
 
-void sys_temp(){
+void sys_temp(char * buf){
+	print(buf);
 }
 
 void * const sys_call_table[] = {sys_write, sys_malloc, sys_clone, sys_exit,sys_temp};
