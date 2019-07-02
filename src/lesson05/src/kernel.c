@@ -54,6 +54,10 @@ void kernel_process(){
 	} 
 }
 
+void kernel_temp(){
+	printf("Vamos a almacenar la temperatura");
+	call_sys_temp(uart_recv());
+}
 
 void kernel_main(void)
 {
