@@ -34,13 +34,13 @@ void uart_init ( void )
 	selector = get32(GPFSEL1);
 	selector &= ~(7<<12);                   // clean gpio14
 	selector |= 2<<12;                      // set alt5 for gpio14
-	selector &= ~(7<<15);                   // clean gpio15
-	selector |= 2<<15;                      // set alt5 for gpio15
+	
+	
 	put32(GPFSEL1,selector);
 
 	put32(GPPUD,0);
 	delay(150);
-	put32(GPPUDCLK0,(1<<14)|(1<<15));
+	put32(GPPUDCLK0,(1<<14);
 	delay(150);
 	put32(GPPUDCLK0,0);
 
